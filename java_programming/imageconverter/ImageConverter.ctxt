@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=image
+comment0.target=edu.duke.ImageResource\ gray(edu.duke.ImageResource)
+comment1.params=
+comment1.target=void\ multipleGray()
+comment2.params=image
+comment2.target=edu.duke.ImageResource\ invert(edu.duke.ImageResource)
+comment3.params=
+comment3.target=void\ multipleInvert()
+comment4.params=
+comment4.target=void\ testGray()
+numComments=5
