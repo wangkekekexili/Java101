@@ -121,6 +121,7 @@ public class BabyNames {
     public static int yearOfHighestRank(String name, String gender) {
         
         int result = -1;
+        String fileName = "";
         
         DirectoryResource dr = new DirectoryResource();
         for (File file : dr.selectedFiles()) {
@@ -132,13 +133,18 @@ public class BabyNames {
                     if (name.equals(record.get(NAME_COLUMN_INDEX))) {
                         if (result == -1 || currentRank < result) {
                             result = currentRank;
+                            fileName = file.getName();
                         }
                     }
                 }
             }
         }
     
-        return result;
+        if (result == -1) {
+            return -1;
+        } else {
+            return Integer.parseInt(fileName.substring(3, 7));
+        }
     }
     
     public static double getAverageRank(String name, String gender) {
